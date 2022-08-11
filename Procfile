@@ -1,0 +1,1 @@
+web: gunicorn smw_web.wsgi --log-file -
