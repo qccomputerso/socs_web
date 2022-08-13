@@ -2,7 +2,7 @@
     --bg: #2b3741;
     --bg2: #a3b3c2;
     --color-text: #1f2a33;
-    --color-link: #0059a2;
+    --color-link: #0069a2;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -68,6 +68,7 @@ hr {
 .o-link-button {
 	border-radius: 7px;
 	background-color: var(--color-link);
+	color: white;
 	padding: 10px;
 	display: inline-block;
 	cursor: pointer;
