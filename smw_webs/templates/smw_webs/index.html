@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
+{% extends "smw_webs/base.html" %}
 {% load static %}
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{% static 'css/style.css' %}">
-	<link rel="shortcut icon" type="image/png" href="{% static 'images/socs-logo.png' %}"/>
-	<title>QC SoCS</title>
-</head>
-<body>
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+{% endblock %}
+{% block page_header %}
 	<div class="c-tab-content">
 		<span class="o-heading">Welcome to our home page!</span>
 		<br>
@@ -62,5 +55,4 @@
 		<br>
 		<div class="o-link-button" onclick="alert('lig- I have been advised not to continue this joke any further')">Contact Us >></div>
 	</div>
-</body>
-</html>
+{% endblock page_header %}

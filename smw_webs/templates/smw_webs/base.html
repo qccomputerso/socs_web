@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+{% load bootstrap4 %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/socs-logo.png' %}"/>
+    <title>QC SoCS</title>
+  
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+  
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+        <a href="{% url 'smw_webs:index' %}"><img src="{% static 'images/socs-logo.png' %}" width="60" height="60"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'smw_webs:index' %}">&nbsp;&nbsp;Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'smw_webs:events' %}">Events</a>                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'smw_webs:contact' %}">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main role="main" class="container">
+        <div class="pb-2 mb-2 border-bottom">
+            {% block page_header %}{% endblock page_header %}
+        </div>
+
+
+        <div>
+            {% block content %}{% endblock content %}
+        </div>
+      
+    </main>
+    
+</body>
+    
+</html>
