@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <a href="{% url 'smw_webs:index' %}"><img src="{% static 'images/socs-logo.png' %}" width="60" height="60"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -35,7 +35,7 @@
     </nav>
     
     <main role="main" class="container">
-        <div class="pb-2 mb-2 border-bottom">
+        <div>
             {% block page_header %}{% endblock page_header %}
         </div>
 
